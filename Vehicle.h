@@ -20,8 +20,11 @@ public:
 		Display();
 	}
 
-	void Display()
+	virtual void Display()
 	{
+		//Adding virtual to the display function tells the vehicle class to call the display
+		//function of a child class that is specified when creating an instance for one of the elements
+		//in the array.
 		std::cout << "Name : " << className << std::endl;
 		std::cout << "Id: " << id << std::endl;
 		std::cout << "Damage: " << damage << std::endl;

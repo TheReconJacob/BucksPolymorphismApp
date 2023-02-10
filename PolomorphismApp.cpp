@@ -22,9 +22,6 @@ int main()
     for (Vehicle* vehicle : vehicles)
     {
         vehicle->Display();
-        // The Vehicle class is the default class for the Display function that is called since
-        // it's the main function. We need to manually tell the code to call the children classes
-        // of Vehicle that matches the instance class that was assigned to that given element.
     }
 }
 
