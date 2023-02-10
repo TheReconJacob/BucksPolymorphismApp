@@ -6,6 +6,7 @@ class Vehicle
 protected:
 	int id = 0;
 private:
+	std::string className = "Vehicle";
 	int damage = 0;
 
 public:
@@ -21,6 +22,7 @@ public:
 
 	void Display()
 	{
+		std::cout << "Name : " << className << std::endl;
 		std::cout << "Id: " << id << std::endl;
 		std::cout << "Damage: " << damage << std::endl;
 	}

@@ -7,6 +7,7 @@ class Boat : public Vehicle
 protected:
 	int id = 0;
 private:
+	std::string className = "Boat";
 	int damage = 0;
 
 public:
@@ -14,11 +15,11 @@ public:
 	{
 		id = instanceId;
 		damage = instanceDamage;
-		Vehicle::Display();
 	}
 
 	void Display()
 	{
+		std::cout << "Name : " << className << std::endl;
 		std::cout << "Id: " << id << std::endl;
 		std::cout << "Damage: " << damage << std::endl;
 	}

@@ -8,9 +8,24 @@
 
 int main()
 {
-    Vehicle v1 = Vehicle(1,30);
-    Boat b1 = Boat(2, 50);
-    Car c1 = Car(3, 40);
+
+    Vehicle* vehicles[5];
+
+    vehicles[0] = new Car(1,35);
+    vehicles[1] = new Boat(2, 55);
+    vehicles[2] = new Vehicle(3, 30);
+    vehicles[3] = new Car(4, 25);
+    vehicles[4] = new Boat(5, 65);
+    // Boat b1 = Boat(2, 50);
+    // Car c1 = Car(3, 40);
+
+    for (Vehicle* vehicle : vehicles)
+    {
+        vehicle->Display();
+        // The Vehicle class is the default class for the Display function that is called since
+        // it's the main function. We need to manually tell the code to call the children classes
+        // of Vehicle that matches the instance class that was assigned to that given element.
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
