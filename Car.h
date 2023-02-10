@@ -14,7 +14,7 @@ public:
 	{
 		id = instanceId;
 		damage = instanceDamage;
-		Display();
+		Vehicle::Display();
 	}
 
 	void Display()
