@@ -3,10 +3,11 @@
 class VehicleManager
 {
 private:
-	static int count;
+	int count;
 	int maxVehicles;
 	Vehicle** vehicles;
 
+public:
 	bool Add(Vehicle* v)
 	{
 		if (count >= maxVehicles) return false;
