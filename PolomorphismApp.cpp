@@ -9,20 +9,20 @@
 int main()
 {
 
-    Vehicle* vehicles[5];
+    // Vehicle* vehicles[5];
 
-    vehicles[0] = new Car(1,35);
-    vehicles[1] = new Boat(2, 55);
-    vehicles[2] = new Vehicle(3, 30);
-    vehicles[3] = new Car(4, 25);
-    vehicles[4] = new Boat(5, 65);
-    // Boat b1 = Boat(2, 50);
-    // Car c1 = Car(3, 40);
+    // vehicles[0] = new Car(1,35);
+    // vehicles[1] = new Boat(2, 55);
+    // vehicles[2] = new Vehicle(3, 30);
+    // vehicles[3] = new Car(4, 25);
+    // vehicles[4] = new Boat(5, 65);
+    //// Boat b1 = Boat(2, 50);
+    //// Car c1 = Car(3, 40);
 
-    for (Vehicle* vehicle : vehicles)
-    {
-        vehicle->Display();
-    }
+    //for (Vehicle* vehicle : vehicles)
+    // {
+    //     vehicle->Display();
+    // }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
