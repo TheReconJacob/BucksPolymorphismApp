@@ -40,7 +40,7 @@ public:
 	{
 		count = 0;
 		maxVehicles = size;
-		vehicles = new Vehicle * [size];
+		vehicles = new Vehicle*[size];
 	}
 };
 

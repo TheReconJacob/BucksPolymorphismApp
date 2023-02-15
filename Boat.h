@@ -4,24 +4,17 @@
 
 class Boat : public Vehicle
 {
-protected:
-	int id = 0;
-private:
-	std::string className = "Boat";
-	int damage = 0;
 
 public:
-	Boat(int instanceId, int instanceDamage)
+	Boat(int instanceId, int instanceDamage) : Vehicle(instanceId, instanceDamage)
 	{
-		id = instanceId;
-		damage = instanceDamage;
+		className = "Boat";
 	}
 
-	void Display()
+	void Display() override
 	{
 		std::cout << "Name : " << className << std::endl;
 		std::cout << "Id: " << id << std::endl;
-		std::cout << "Damage: " << damage << std::endl;
 	}
 };
 

@@ -5,19 +5,17 @@ class Vehicle
 {
 protected:
 	int id = 0;
-private:
 	std::string className = "Vehicle";
+private:
 	int damage = 0;
 
 public:
-	Vehicle()
-	{}
+	Vehicle() = default;
 
 	Vehicle(int instanceId, int instanceDamage)
 	{
 		id = instanceId;
 		damage = instanceDamage;
-		Display();
 	}
 
 	virtual void Display()
@@ -27,7 +25,8 @@ public:
 		//in the array.
 		std::cout << "Name : " << className << std::endl;
 		std::cout << "Id: " << id << std::endl;
-		std::cout << "Damage: " << damage << std::endl;
 	}
+
+	friend Vehicle** DamagedVehicles(Vehicle** vehicles, int *size);
 };
 
