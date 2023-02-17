@@ -42,5 +42,9 @@ public:
 		maxVehicles = size;
 		vehicles = new Vehicle*[size];
 	}
+
+	void DisplayDamaged(Vehicle* damagedVehicle) {
+		damagedVehicle->Display();
+	}
 };
 

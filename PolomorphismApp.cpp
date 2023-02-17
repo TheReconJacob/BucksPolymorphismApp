@@ -7,25 +7,24 @@
 #include "Car.h"
 #include "VehicleManager.h"
 
+
+VehicleManager* vehicleManager = new VehicleManager(10);
+
 Vehicle** DamagedVehicles(Vehicle** vehicles, int *size)
 {
     Vehicle** damaged = new Vehicle*[*size];
-    int i = 0;
-    for (int n = 0; n < *size; n++)
+    for (int i = 0; i < *size; i++)
     {
-        if (vehicles[n]->damage >= 35)
+        if (vehicles[i]->damage >= 35)
         {
-            damaged[i] = vehicles[n];
-            i++;
+            vehicleManager->DisplayDamaged(vehicles[i]);
         }
     }
-    *size = i;
     return damaged;
 }
 
 int main()
 {
-    VehicleManager* vehicleManager = new VehicleManager(10);
     // Vehicle* vehicles[5];
 
     vehicleManager->Add(new Car(1, 35));
@@ -38,11 +37,6 @@ int main()
     int* count = new int(0);
     *count = vehicleManager->GetCount();
 
-    Vehicle** damagedList = DamagedVehicles(vehicleManager->GetList(), count);
-    
     std::cout << "\nThe following vehicles have been damaged too much: " << std::endl;
-    for (int n = 0; n < *count; n++)
-    {
-        damagedList[n]->Display();
-    }
+    DamagedVehicles(vehicleManager->GetList(), count);
 }

@@ -1,5 +1,4 @@
-﻿  Boat.cpp
-  Car.cpp
-  PolomorphismApp.cpp
+﻿  PolomorphismApp.cpp
+  VehicleManager.cpp
   Generating Code...
   PolomorphismApp.vcxproj -> C:\Users\jvt05\Documents\PolomorphismApp\Debug\PolomorphismApp.exe
